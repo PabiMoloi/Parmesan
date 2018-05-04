@@ -15,12 +15,7 @@ class Meal {
     var photo: UIImage?
     var category: String?
     
-    init? (title: String, photo:UIImage?, category: String?){
-        
-        if title.isEmpty{
-            return nil
-        }
-        
+    init (title: String, photo:UIImage?, category: String?){
         self.title = title
         self.photo = photo
         self.category = category
