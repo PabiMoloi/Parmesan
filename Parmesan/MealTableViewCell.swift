@@ -9,9 +9,7 @@
 import UIKit
 
 class MealTableViewCell: UITableViewCell {
-
-    //MARK: Properties
-  
+    
     @IBOutlet weak var title: UILabel!
     @IBOutlet weak var category: UILabel!
     @IBOutlet weak var picture: UIImageView!
