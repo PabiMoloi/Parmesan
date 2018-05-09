@@ -13,7 +13,6 @@
 		ED007CEB209AE64E0077DFFC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ED007CEA209AE64E0077DFFC /* Assets.xcassets */; };
 		ED007CEE209AE64E0077DFFC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ED007CEC209AE64E0077DFFC /* LaunchScreen.storyboard */; };
 		ED007CF9209AE6520077DFFC /* ParmesanTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED007CF8209AE6520077DFFC /* ParmesanTests.swift */; };
-		ED46CE6520A30E3A00F78917 /* MealsJSON.json in Sources */ = {isa = PBXBuildFile; fileRef = ED69F50820A181C400B0B66E /* MealsJSON.json */; };
 		ED4E10FA209B2E59006F5583 /* MealTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED4E10F9209B2E59006F5583 /* MealTableViewCell.swift */; };
 		ED5B10A6209C2E33007042E7 /* Meal.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED5B10A5209C2E33007042E7 /* Meal.swift */; };
 		ED5B10AE209C40E0007042E7 /* MealTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED5B10AD209C40E0007042E7 /* MealTableViewController.swift */; };
@@ -214,7 +213,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				ED46CE6520A30E3A00F78917 /* MealsJSON.json in Sources */,
 				ED5B10AE209C40E0007042E7 /* MealTableViewController.swift in Sources */,
 				ED5B10A6209C2E33007042E7 /* Meal.swift in Sources */,
 				EDA332CA20A04A220017F4ED /* RecipeViewController.swift in Sources */,
