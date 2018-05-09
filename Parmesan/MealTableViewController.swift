@@ -11,10 +11,11 @@ import UIKit
 class MealTableViewController: UITableViewController {
 
     var meals = [Meal]()
+    var responseData = [ResponseData]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        loadMeals()
+        meals = loadMealsJsonData(filename: "MealsJSON")!
     }
 
     override func didReceiveMemoryWarning() {
@@ -40,82 +41,46 @@ class MealTableViewController: UITableViewController {
         
         let meal = meals[indexPath.row]
 
-        cell.title.text = meal.title
-        cell.picture.image = meal.photo
-        cell.category.text = meal.category
+        cell.title.text = meal.strMeal
+        cell.picture.image = UIImage(named: meal.strMealThumb)
+        cell.category.text = meal.strCategory
 
         return cell
     }
     
-
-    /*
-    // Override to support conditional editing of the table view.
-    override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the specified item to be editable.
-        return true
-    }
-    */
-
-    /*
-    // Override to support editing the table view.
-    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
-        if editingStyle == .delete {
-            // Delete the row from the data source
-            tableView.deleteRows(at: [indexPath], with: .fade)
-        } else if editingStyle == .insert {
-            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-        }    
-    }
-    */
-
-    /*
-    // Override to support rearranging the table view.
-    override func tableView(_ tableView: UITableView, moveRowAt fromIndexPath: IndexPath, to: IndexPath) {
-
-    }
-    */
-
-    /*
-    // Override to support conditional rearranging of the table view.
-    override func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the item to be re-orderable.
-        return true
-    }
-    */
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+        if (segue.identifier == "detailsSegue"){
+            let recipeView: RecipeViewController = segue.destination as! RecipeViewController
+            let indexPath = self.tableView.indexPathForSelectedRow!
+            let titleString = self.meals[indexPath.row]
+            recipeView.mTitle = titleString.strMeal
+            recipeView.mCategory = titleString.strCategory
+            recipeView.mThumb = titleString.strMealThumb
+            recipeView.mInstructions = titleString.strInstructions
+            recipeView.mIngredient1 = titleString.strIngredient1
+            recipeView.mIngredient2 = titleString.strIngredient2
+            recipeView.mIngredient3 = titleString.strIngredient3
+            recipeView.mIngredient4 = titleString.strIngredient4
+            recipeView.mIngredient5 = titleString.strIngredient5!
+            recipeView.mMeasure1 = titleString.strMeasure1
+            recipeView.mMeasure2 = titleString.strMeasure2
+            recipeView.mMeasure3 = titleString.strMeasure3
+            recipeView.mMeasure4 = titleString.strMeasure4
+            recipeView.mMeasure5 = titleString.strMeasure5!
+        }
     }
-    */
     
-    private func loadMeals(){
-        
-        let chickenAlfredoImage = UIImage (named: "chickenalfredo")
-        let chilliPrawnImage = UIImage(named:"chilliprawn")
-        let fettucineAlfredoImage = UIImage(named: "fettucinealfredo")
-        let lasagneImage = UIImage(named:"lasange")
-        let pastaSaladImage = UIImage(named: "pastasalad")
-        let pilchardMilaneImage = UIImage(named: "pilchardmilane")
-        let spaghettiBologneseImage = UIImage(named: "spagettibolognese")
-        let squashLinguineImage = UIImage(named: "squashlinguine")
-        let venetianDuckImage = UIImage(named: "venetianduckragu")
-        
-        let ChickenAlfredoMeal = Meal(title:"Chicken Alfredo Primavera",photo: chickenAlfredoImage,category: "Chicken")
-        let ChilliPrawnMeal = Meal(title: "Chilli Prawn", photo: chilliPrawnImage, category: "Pasta")
-        let FettucineAlfredoMeal = Meal(title: "Fettucine Alfredo", photo: fettucineAlfredoImage, category: "Pasta")
-        let LasangeMeal = Meal(title: "Lasange", photo: lasagneImage, category: "Pasta")
-        let PastaSaladMeal = Meal(title: "Mediterranean Pasta Salad", photo: pastaSaladImage, category: "Chicken")
-        let PilchardMilaneMeal = Meal(title: "Pilchard Puttanesca", photo: pilchardMilaneImage, category: "Pasta")
-        let SpagettiBologneseMeal = Meal(title: "Spaghetti Bolognese", photo: spaghettiBologneseImage, category: "Pasta")
-        let SquashLinguineMeal = Meal(title: "Squash Linguine", photo: squashLinguineImage, category: "Pasta")
-        let VenetianDuckRagu = Meal(title: "Venetian Duck Ragu", photo: venetianDuckImage, category: "Duck")
-        
-        meals += [ChickenAlfredoMeal, ChilliPrawnMeal, FettucineAlfredoMeal, LasangeMeal, PastaSaladMeal, PilchardMilaneMeal,SpagettiBologneseMeal, SquashLinguineMeal, VenetianDuckRagu]
+    func loadMealsJsonData(filename fileName: String) -> [Meal]? {
+        if let url = Bundle.main.url(forResource: fileName, withExtension: "json") {
+            do {
+                let data = try Data(contentsOf: url)
+                let decoder = JSONDecoder()
+                let jsonData = try decoder.decode(ResponseData.self, from: data)
+                return jsonData.meals
+            } catch {
+                print("error:\(error)")
+            }
+        }
+        return nil
     }
-
 }

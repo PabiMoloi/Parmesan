@@ -16,6 +16,8 @@
 		ED4E10FA209B2E59006F5583 /* MealTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED4E10F9209B2E59006F5583 /* MealTableViewCell.swift */; };
 		ED5B10A6209C2E33007042E7 /* Meal.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED5B10A5209C2E33007042E7 /* Meal.swift */; };
 		ED5B10AE209C40E0007042E7 /* MealTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED5B10AD209C40E0007042E7 /* MealTableViewController.swift */; };
+		ED69F50920A181C500B0B66E /* MealsJSON.json in Resources */ = {isa = PBXBuildFile; fileRef = ED69F50820A181C400B0B66E /* MealsJSON.json */; };
+		EDA332CA20A04A220017F4ED /* RecipeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDA332C920A04A220017F4ED /* RecipeViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,6 +44,8 @@
 		ED4E10F9209B2E59006F5583 /* MealTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealTableViewCell.swift; sourceTree = "<group>"; };
 		ED5B10A5209C2E33007042E7 /* Meal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Meal.swift; sourceTree = "<group>"; };
 		ED5B10AD209C40E0007042E7 /* MealTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealTableViewController.swift; sourceTree = "<group>"; };
+		ED69F50820A181C400B0B66E /* MealsJSON.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = MealsJSON.json; path = ../../MealsJSON.json; sourceTree = "<group>"; };
+		EDA332C920A04A220017F4ED /* RecipeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +87,7 @@
 		ED007CE2209AE4C30077DFFC /* Parmesan */ = {
 			isa = PBXGroup;
 			children = (
+				ED69F50820A181C400B0B66E /* MealsJSON.json */,
 				ED007CE3209AE4C50077DFFC /* AppDelegate.swift */,
 				ED007CE5209AE4C80077DFFC /* ViewController.swift */,
 				ED007CE7209AE4D60077DFFC /* Main.storyboard */,
@@ -92,6 +97,7 @@
 				ED007CEF209AE64E0077DFFC /* Info.plist */,
 				ED4E10F9209B2E59006F5583 /* MealTableViewCell.swift */,
 				ED5B10A5209C2E33007042E7 /* Meal.swift */,
+				EDA332C920A04A220017F4ED /* RecipeViewController.swift */,
 			);
 			path = Parmesan;
 			sourceTree = "<group>";
@@ -188,6 +194,7 @@
 			files = (
 				ED007CEE209AE64E0077DFFC /* LaunchScreen.storyboard in Resources */,
 				ED007CEB209AE64E0077DFFC /* Assets.xcassets in Resources */,
+				ED69F50920A181C500B0B66E /* MealsJSON.json in Resources */,
 				ED007CE9209AE4D80077DFFC /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -208,6 +215,7 @@
 			files = (
 				ED5B10AE209C40E0007042E7 /* MealTableViewController.swift in Sources */,
 				ED5B10A6209C2E33007042E7 /* Meal.swift in Sources */,
+				EDA332CA20A04A220017F4ED /* RecipeViewController.swift in Sources */,
 				ED007CE6209AE4C90077DFFC /* ViewController.swift in Sources */,
 				ED007CE4209AE4C50077DFFC /* AppDelegate.swift in Sources */,
 				ED4E10FA209B2E59006F5583 /* MealTableViewCell.swift in Sources */,
