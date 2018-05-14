@@ -87,17 +87,15 @@
 		ED007CE2209AE4C30077DFFC /* Parmesan */ = {
 			isa = PBXGroup;
 			children = (
+				EDABB71120A94D8A00C50BFE /* View */,
+				EDABB71020A94D4E00C50BFE /* ViewModel */,
+				EDABB70F20A94D2400C50BFE /* Network */,
+				EDABB70E20A94D1000C50BFE /* Repository */,
+				EDABB70D20A94CFB00C50BFE /* Model */,
 				ED46CE6920A322B200F78917 /* MealsJSON.json */,
 				ED007CE3209AE4C50077DFFC /* AppDelegate.swift */,
-				ED007CE5209AE4C80077DFFC /* ViewController.swift */,
-				ED007CE7209AE4D60077DFFC /* Main.storyboard */,
-				ED5B10AD209C40E0007042E7 /* MealTableViewController.swift */,
 				ED007CEA209AE64E0077DFFC /* Assets.xcassets */,
-				ED007CEC209AE64E0077DFFC /* LaunchScreen.storyboard */,
 				ED007CEF209AE64E0077DFFC /* Info.plist */,
-				ED4E10F9209B2E59006F5583 /* MealTableViewCell.swift */,
-				ED5B10A5209C2E33007042E7 /* Meal.swift */,
-				EDA332C920A04A220017F4ED /* RecipeViewController.swift */,
 			);
 			path = Parmesan;
 			sourceTree = "<group>";
@@ -109,6 +107,51 @@
 				ED007CFA209AE6520077DFFC /* Info.plist */,
 			);
 			path = ParmesanTests;
+			sourceTree = "<group>";
+		};
+		EDABB70D20A94CFB00C50BFE /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				ED5B10A5209C2E33007042E7 /* Meal.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		EDABB70E20A94D1000C50BFE /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Repository;
+			path = "New Group";
+			sourceTree = "<group>";
+		};
+		EDABB70F20A94D2400C50BFE /* Network */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Network;
+			path = "New Group1";
+			sourceTree = "<group>";
+		};
+		EDABB71020A94D4E00C50BFE /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = ViewModel;
+			path = "New Group2";
+			sourceTree = "<group>";
+		};
+		EDABB71120A94D8A00C50BFE /* View */ = {
+			isa = PBXGroup;
+			children = (
+				ED4E10F9209B2E59006F5583 /* MealTableViewCell.swift */,
+				ED007CE5209AE4C80077DFFC /* ViewController.swift */,
+				EDA332C920A04A220017F4ED /* RecipeViewController.swift */,
+				ED5B10AD209C40E0007042E7 /* MealTableViewController.swift */,
+				ED007CEC209AE64E0077DFFC /* LaunchScreen.storyboard */,
+				ED007CE7209AE4D60077DFFC /* Main.storyboard */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
