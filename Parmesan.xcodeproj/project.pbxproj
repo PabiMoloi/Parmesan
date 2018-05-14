@@ -89,7 +89,6 @@
 			children = (
 				EDABB71120A94D8A00C50BFE /* View */,
 				EDABB71020A94D4E00C50BFE /* ViewModel */,
-				EDABB70F20A94D2400C50BFE /* Network */,
 				EDABB70E20A94D1000C50BFE /* Repository */,
 				EDABB70D20A94CFB00C50BFE /* Model */,
 				ED46CE6920A322B200F78917 /* MealsJSON.json */,
@@ -122,24 +121,16 @@
 			children = (
 			);
 			name = Repository;
-			path = "New Group";
-			sourceTree = "<group>";
-		};
-		EDABB70F20A94D2400C50BFE /* Network */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = Network;
-			path = "New Group1";
-			sourceTree = "<group>";
+			path = Parmesan/Repository;
+			sourceTree = SOURCE_ROOT;
 		};
 		EDABB71020A94D4E00C50BFE /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
 			);
 			name = ViewModel;
-			path = "New Group2";
-			sourceTree = "<group>";
+			path = Parmesan/ViewModel;
+			sourceTree = SOURCE_ROOT;
 		};
 		EDABB71120A94D8A00C50BFE /* View */ = {
 			isa = PBXGroup;
