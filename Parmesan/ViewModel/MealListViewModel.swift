@@ -17,7 +17,7 @@ class MealListViewModel {
         self.MealList = MealListRepo.getMealList()
     }
     
-    func getMeals -> [Meal] {
+    func getMeals() -> [Meal] {
         return MealList
     }
 }

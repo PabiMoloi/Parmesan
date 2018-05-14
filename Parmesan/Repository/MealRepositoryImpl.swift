@@ -19,7 +19,7 @@ struct MealRepositoryImpl : MealRepository {
     
     func getMealRecipe(mealId: String) -> Meal? {
         for mealRecipe in meals {
-            if mealRecipe.mealId = mealId {
+            if mealRecipe.idMeal == mealId {
                 return mealRecipe
             }
         }
