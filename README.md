@@ -7,3 +7,7 @@ A simple iOS project that displays a list of Italian recipes including ingredien
 ![Screenshot](https://github.com/PabiMoloi/Parmesan/blob/master/art/SplashScreen.png)
 ![Screenshot](https://github.com/PabiMoloi/Parmesan/blob/master/art/ListView.png)
 ![Screenshot](https://github.com/PabiMoloi/Parmesan/blob/master/art/DetailsView.png)
+
+# Minimum Requirements
+Version 9.3.1 
+Swift 4.1
