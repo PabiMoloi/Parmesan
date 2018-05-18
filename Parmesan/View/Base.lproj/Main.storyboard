@@ -75,6 +75,9 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="PARMESAN" id="YBU-Bl-tOX"/>
+                    <connections>
+                        <outlet property="mealList" destination="h3h-qi-tAh" id="FCh-38-Q1j"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eAq-6e-RTl" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

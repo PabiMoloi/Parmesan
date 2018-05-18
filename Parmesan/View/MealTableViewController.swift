@@ -12,10 +12,24 @@ class MealTableViewController: UITableViewController {
 
     var meals = [Meal]()
     var responseData = [ResponseData]()
+    var mealListViewModel = MealListViewModel()
     
+    @IBOutlet var mealList: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
-        meals = loadMealsJsonData(filename: "MealsJSON")!
+        meals = loadMealsJsonData(filename: "MealsJSON")! /*** kept for testing purposes**/
+        //setTableViewDataSourceAndDelegate()
+    }
+    
+    private func setTableViewDataSourceAndDelegate() {
+        mealList.dataSource = self
+        mealList.delegate = self
+        responseData = mealListViewModel.getMeals()
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        responseData = mealListViewModel.getMeals()
+        self.mealList.reloadData()
     }
 
     override func didReceiveMemoryWarning() {
@@ -43,7 +57,6 @@ class MealTableViewController: UITableViewController {
 
         cell.title.text = meal.strMeal
         cell.picture.image = UIImage(named: meal.strMealThumb)
-        cell.category.text = meal.strCategory
 
         return cell
     }
@@ -54,9 +67,9 @@ class MealTableViewController: UITableViewController {
             let indexPath = self.tableView.indexPathForSelectedRow!
             let titleString = self.meals[indexPath.row]
             recipeView.mTitle = titleString.strMeal
-            recipeView.mCategory = titleString.strCategory
+            //recipeView.mCategory = titleString.strCategory!
             recipeView.mThumb = titleString.strMealThumb
-            recipeView.mInstructions = titleString.strInstructions
+           /* recipeView.mInstructions = titleString.strInstructions!
             recipeView.mIngredient1 = titleString.strIngredient1
             recipeView.mIngredient2 = titleString.strIngredient2
             recipeView.mIngredient3 = titleString.strIngredient3
@@ -66,7 +79,7 @@ class MealTableViewController: UITableViewController {
             recipeView.mMeasure2 = titleString.strMeasure2
             recipeView.mMeasure3 = titleString.strMeasure3
             recipeView.mMeasure4 = titleString.strMeasure4
-            recipeView.mMeasure5 = titleString.strMeasure5!
+            recipeView.mMeasure5 = titleString.strMeasure5!*/
         }
     }
     

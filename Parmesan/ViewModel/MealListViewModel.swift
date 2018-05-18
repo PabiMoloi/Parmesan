@@ -10,14 +10,14 @@ import Foundation
 
 class MealListViewModel {
     
-    var MealList : [Meal]
+    var MealList : [ResponseData]
     let MealListRepo = MealRepositoryImpl()
     
     init() {
         self.MealList = MealListRepo.getMealList()
     }
     
-    func getMeals() -> [Meal] {
+    func getMeals() -> [ResponseData] {
         return MealList
     }
 }

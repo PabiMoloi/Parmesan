@@ -10,11 +10,24 @@ import Foundation
 
 struct MealRepositoryImpl : MealRepository {
     
-    var meals: [Meal] = []
+    var meals = [Meal]()
+    var responseData = [ResponseData]()
     var mealRecipe: Meal? = nil
-    
-    func getMealList() -> [Meal] {
-        return meals
+    let apiCall = ApiClient()
+
+    func getMealList() -> [ResponseData] {
+        apiCall.getMealList(completion: { meal in
+            do {
+                let jsonData = try? JSONSerialization.data(withJSONObject: meal, options: [])
+                let decoder = JSONDecoder()
+                let jsonResponse = try decoder.decode(ResponseData.self, from: jsonData!)
+                print(jsonResponse.meals)
+            }
+            catch {
+                print("error:\(error)")
+            }
+        })
+        return responseData
     }
     
     func getMealRecipe(mealId: String) -> Meal? {

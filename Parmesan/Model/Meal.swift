@@ -13,9 +13,13 @@ struct Meal : Decodable{
     var idMeal: String
     var strMeal: String
     var strMealThumb: String
-    var strCategory: String
-    var strArea: String
-    var strInstructions: String
+    
+}
+
+struct Recipe: Decodable{
+    var strCategory: String?
+    var strArea: String?
+    var strInstructions: String?
     var strTags: String?
     var strIngredient1: String
     var strIngredient2: String
@@ -38,6 +42,6 @@ struct Meal : Decodable{
     var strMeasure9: String?
     var strMeasure10: String?
 }
-struct ResponseData : Decodable{
+struct ResponseData : Decodable {
     var meals: [Meal]
 }
