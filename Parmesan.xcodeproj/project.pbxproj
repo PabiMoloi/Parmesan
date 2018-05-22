@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8225301774D4F0C04FE8F264 /* Pods_Parmesan.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC086ABDAB461C44ECBD9F29 /* Pods_Parmesan.framework */; };
+		ADCD9C03E392117AE78682E1 /* Pods_ParmesanTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E5011EDB093230B186E6FF14 /* Pods_ParmesanTests.framework */; };
 		ED007CE4209AE4C50077DFFC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED007CE3209AE4C50077DFFC /* AppDelegate.swift */; };
 		ED007CE6209AE4C90077DFFC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED007CE5209AE4C80077DFFC /* ViewController.swift */; };
 		ED007CE9209AE4D80077DFFC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ED007CE7209AE4D60077DFFC /* Main.storyboard */; };
@@ -35,6 +37,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		67CD351CD94367026E87DDAA /* Pods-Parmesan.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Parmesan.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Parmesan/Pods-Parmesan.debug.xcconfig"; sourceTree = "<group>"; };
+		D42EE1DA18F53AEE20FCD39F /* Pods-ParmesanTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ParmesanTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ParmesanTests/Pods-ParmesanTests.release.xcconfig"; sourceTree = "<group>"; };
+		E04596E3792326D606AD4FB6 /* Pods-ParmesanTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ParmesanTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ParmesanTests/Pods-ParmesanTests.debug.xcconfig"; sourceTree = "<group>"; };
+		E5011EDB093230B186E6FF14 /* Pods_ParmesanTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ParmesanTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		ED007CE0209AE4C20077DFFC /* Parmesan.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Parmesan.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ED007CE3209AE4C50077DFFC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		ED007CE5209AE4C80077DFFC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -54,6 +60,8 @@
 		ED5B10A5209C2E33007042E7 /* Meal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Meal.swift; sourceTree = "<group>"; };
 		ED5B10AD209C40E0007042E7 /* MealTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealTableViewController.swift; sourceTree = "<group>"; };
 		EDA332C920A04A220017F4ED /* RecipeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeViewController.swift; sourceTree = "<group>"; };
+		F491E35D2772473FE3E356C0 /* Pods-Parmesan.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Parmesan.release.xcconfig"; path = "Pods/Target Support Files/Pods-Parmesan/Pods-Parmesan.release.xcconfig"; sourceTree = "<group>"; };
+		FC086ABDAB461C44ECBD9F29 /* Pods_Parmesan.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Parmesan.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +69,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8225301774D4F0C04FE8F264 /* Pods_Parmesan.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -68,18 +77,41 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ADCD9C03E392117AE78682E1 /* Pods_ParmesanTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		23F58DA84854B6C9C00D6045 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				67CD351CD94367026E87DDAA /* Pods-Parmesan.debug.xcconfig */,
+				F491E35D2772473FE3E356C0 /* Pods-Parmesan.release.xcconfig */,
+				E04596E3792326D606AD4FB6 /* Pods-ParmesanTests.debug.xcconfig */,
+				D42EE1DA18F53AEE20FCD39F /* Pods-ParmesanTests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		603C100115303E98D4F5874E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				FC086ABDAB461C44ECBD9F29 /* Pods_Parmesan.framework */,
+				E5011EDB093230B186E6FF14 /* Pods_ParmesanTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		ED007CD7209AE4C00077DFFC = {
 			isa = PBXGroup;
 			children = (
 				ED007CE2209AE4C30077DFFC /* Parmesan */,
 				ED007CF7209AE6520077DFFC /* ParmesanTests */,
 				ED007CE1209AE4C20077DFFC /* Products */,
+				23F58DA84854B6C9C00D6045 /* Pods */,
+				603C100115303E98D4F5874E /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -173,9 +205,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = ED007CFD209AE6520077DFFC /* Build configuration list for PBXNativeTarget "Parmesan" */;
 			buildPhases = (
+				31A28ACA14E54778B63ED375 /* [CP] Check Pods Manifest.lock */,
 				ED007CDC209AE4C10077DFFC /* Sources */,
 				ED007CDD209AE4C10077DFFC /* Frameworks */,
 				ED007CDE209AE4C10077DFFC /* Resources */,
+				0604C2D8A6C2180FFB357B60 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -190,6 +224,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = ED007D00209AE6520077DFFC /* Build configuration list for PBXNativeTarget "ParmesanTests" */;
 			buildPhases = (
+				2E19BE57A32B5A0665415B88 /* [CP] Check Pods Manifest.lock */,
 				ED007CF0209AE6520077DFFC /* Sources */,
 				ED007CF1209AE6520077DFFC /* Frameworks */,
 				ED007CF2209AE6520077DFFC /* Resources */,
@@ -262,6 +297,63 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0604C2D8A6C2180FFB357B60 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Parmesan/Pods-Parmesan-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Parmesan/Pods-Parmesan-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		2E19BE57A32B5A0665415B88 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ParmesanTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		31A28ACA14E54778B63ED375 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Parmesan-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		ED007CDC209AE4C10077DFFC /* Sources */ = {
@@ -435,6 +527,7 @@
 		};
 		ED007CFE209AE6520077DFFC /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 67CD351CD94367026E87DDAA /* Pods-Parmesan.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -454,6 +547,7 @@
 		};
 		ED007CFF209AE6520077DFFC /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F491E35D2772473FE3E356C0 /* Pods-Parmesan.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -473,6 +567,7 @@
 		};
 		ED007D01209AE6520077DFFC /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E04596E3792326D606AD4FB6 /* Pods-ParmesanTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -494,6 +589,7 @@
 		};
 		ED007D02209AE6520077DFFC /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D42EE1DA18F53AEE20FCD39F /* Pods-ParmesanTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
