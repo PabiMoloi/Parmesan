@@ -7,32 +7,20 @@
 //
 
 import Foundation
+import Alamofire
 
 class ApiClient{
     
-    let baseUrl = URL(string: "https://www.themealdb.com/api/json/v1/1/filter.php?a=Italian")
-    let jsonDecoder = JSONDecoder()
-    let defaultSession = URLSession(configuration: .default)
-    
-    func getMealList(completion: @escaping (AnyObject) -> Void) {
-        
-        let task = defaultSession.dataTask(with: baseUrl!, completionHandler: {
-            (data, response, error) in
-            if error != nil {
-                print(error!.localizedDescription)
-                
-            } else {
-                
-                do {
-                    let json = try JSONSerialization.jsonObject(with: data!)
-                    completion(json as AnyObject)
-                    } catch {
-                    print("error in JSONSerialization")
-                }
+    let baseUrl = "https://www.themealdb.com/api/json/v1/1/filter.php?a=Italian"
+    //let jsonDecoder = JSONDecoder()
+    //let defaultSession = URLSession(configuration: .default)
+    var responseData = [ResponseData]()
+    func getMealList() -> [ResponseData]? {
+        Alamofire.request(baseUrl).responseJSON{meals in
+            self.responseData = [meals.value as! ResponseData]
             }
-            
-        })
-        task.resume()
+        return responseData
+        }
     }
-}
+
 

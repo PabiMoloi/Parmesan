@@ -15,19 +15,8 @@ struct MealRepositoryImpl : MealRepository {
     var mealRecipe: Meal? = nil
     let apiCall = ApiClient()
 
-    func getMealList() -> [ResponseData] {
-        apiCall.getMealList(completion: { meal in
-            do {
-                let jsonData = try? JSONSerialization.data(withJSONObject: meal, options: [])
-                let decoder = JSONDecoder()
-                let jsonResponse = try decoder.decode(ResponseData.self, from: jsonData!)
-                print(jsonResponse.meals)
-            }
-            catch {
-                print("error:\(error)")
-            }
-        })
-        return responseData
+    func getMealList(completion: @escaping (ResponseData) -> Void) -> [ResponseData]{
+        return apiCall.getMealList()!
     }
     
     func getMealRecipe(mealId: String) -> Meal? {

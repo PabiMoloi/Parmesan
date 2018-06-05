@@ -10,6 +10,6 @@ import Foundation
 
 protocol MealRepository{
     
-    func getMealList() -> [ResponseData]
+    func getMealList(completion: @escaping (ResponseData) -> Void) -> [ResponseData]
     func getMealRecipe(mealId: String) -> Meal?
 }

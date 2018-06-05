@@ -17,8 +17,8 @@ class MealTableViewController: UITableViewController {
     @IBOutlet var mealList: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
-        meals = loadMealsJsonData(filename: "MealsJSON")! /*** kept for testing purposes**/
-        //setTableViewDataSourceAndDelegate()
+        //meals = loadMealsJsonData(filename: "MealsJSON")! /*** kept for testing purposes**/
+        setTableViewDataSourceAndDelegate()
     }
     
     private func setTableViewDataSourceAndDelegate() {
